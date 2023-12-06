@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Vikings";
+  src: url("../fonts/VikingsFont.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color: white;
+  font-family: "Vikings", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #010101;
+  line-height: 1.55;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 80px 40px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+#sparkCanvas {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  height: 100%;
+  z-index: 3;
+  will-change: transform;
+  transition: transform 1.5s cubic-bezier(0.075, 0.5, 0, 1);
+}
+
+.wrapper-base,
+.wrapper-front-left,
+.wrapper-front-right,
+.wrapper-front-center {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 150px;
+  margin: auto;
+  height: 250px;
+  width: 700px;
+  animation: pulse 5s infinite;
+  transition: transform 1.5s cubic-bezier(0.075, 0.5, 0, 1);
+  transform: translate3d(0, calc(var(--scroll) / 7), 0);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/legacy-logo.png");
+  z-index: 1;
+}
+
+.wrapper-base {
+  background-image: url("../img/base-background.jpg");
+  z-index: 1;
+  transition: transform 1.5s cubic-bezier(0.075, 0.5, 0, 1);
+  transform: translate3d(0, calc(var(--scroll) / 1.5), 0);
+}
+
+.wrapper-front-left {
+  background-image: url("../img/front-background-left.png");
+  z-index: 2;
+  transition: transform 1.5s cubic-bezier(0.075, 0.5, 0, 1);
+  transform: translate3d(calc(var(--scroll) / -9), calc(var(--scroll) / 5), 0);
+}
+
+.wrapper-front-right {
+  background-image: url("../img/front-background-right.png");
+  z-index: 2;
+  transition: transform 1.5s cubic-bezier(0.075, 0.5, 0, 1);
+  transform: translate3d(calc(var(--scroll) / 5), calc(var(--scroll) / 12), 0);
+}
+
+.wrapper-front-center {
+  background-image: url("../img/front-background-center.png");
+  transition: transform 1.5s cubic-bezier(0.075, 0.5, 0, 1);
+  transform: translate3d(0, calc(var(--scroll) / 15), 0);
+  z-index: 4;
+}
+
+.effects {
+  position: absolute;
+  top: 62%;
+  left: 49%;
+  z-index: 2;
+  will-change: transform;
+  transform: translate(-50%, -50%);
+  animation: effectRotateAndScale 25s infinite linear alternate;
+}
+
+@keyframes effectRotateAndScale {
+  0% {
+    transform: rotate3d(0, 0, 0, 0) scale3d(1, 1, 1);
+  }
+  20% {
+    transform: rotate3d(0, 0, 1, 100deg) scale3d(1.4, 1.4, 1.4);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, 150deg) scale3d(1.2, 1.2, 1);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 200deg) scale3d(1, 1, 1);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, 250deg) scale3d(1.5, 1.3, 1.3);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg) scale3d(1.2, 1.3, 1.3);
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
