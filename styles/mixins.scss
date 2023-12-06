@@ -1,0 +1,53 @@
+//note disable hover effect
+@mixin disable-hover-effects {
+  @media (hover: none), (hover: on-demand) {
+    pointer-events: none;
+  }
+}
+
+
+//note css-flex
+@mixin flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-all-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+//note offset
+@mixin gap($gap) {
+  display: grid;
+  gap: $gap;
+}
+
+
+//note responsive
+@mixin desktop-large {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}

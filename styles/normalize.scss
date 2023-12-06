@@ -5,13 +5,22 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: white;
-  font-family: "Vikings", sans-serif;
+  font-family: "Hogwarts", sans-serif;
   font-size: 16px;
   //::-webkit-scrollbar {
   //  //display: none;
   //}
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 body {
   background-color: #010101;

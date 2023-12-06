@@ -1,4 +1,6 @@
 @font-face {
-  font-family: "Vikings";
-  src: url("../fonts/VikingsFont.ttf") format("truetype");
+  font-family: 'Hogwarts';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Hogwarts.ttf'), url('../fonts/Hogwarts.woff') format('woff');
 }

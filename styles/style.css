@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "Vikings";
-  src: url("../fonts/VikingsFont.ttf") format("truetype");
+  font-family: "Hogwarts";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Hogwarts.ttf"), url("../fonts/Hogwarts.woff") format("woff");
 }
 * {
   margin: 0;
@@ -8,8 +10,18 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: white;
-  font-family: "Vikings", sans-serif;
+  font-family: "Hogwarts", sans-serif;
   font-size: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 body {
@@ -17,6 +29,74 @@ body {
   line-height: 1.55;
 }
 
+@keyframes effectRotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0) scale3d(1, 1, 1);
+  }
+  20% {
+    transform: rotate3d(0, 0, 1, 100deg) scale3d(1.4, 1.4, 1.4);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, 150deg) scale3d(1.2, 1.2, 1);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 200deg) scale3d(1, 1, 1);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, 250deg) scale3d(1.5, 1.3, 1.3);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg) scale3d(1.2, 1.3, 1.3);
+  }
+}
+@-webkit-keyframes effectRotate {
+  0% {
+    transform: rotate3d(0, 0, 0, 0) scale3d(1, 1, 1);
+  }
+  20% {
+    transform: rotate3d(0, 0, 1, 100deg) scale3d(1.4, 1.4, 1.4);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, 150deg) scale3d(1.2, 1.2, 1);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 200deg) scale3d(1, 1, 1);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, 250deg) scale3d(1.5, 1.3, 1.3);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg) scale3d(1.2, 1.3, 1.3);
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
 main {
   min-height: 100vh;
 }
@@ -41,6 +121,39 @@ main {
   height: 100%;
   box-shadow: inset 0 0 80px 40px rgba(0, 0, 0, 0.5);
   z-index: 5;
+}
+.hero__container {
+  position: relative;
+}
+.hero__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 6;
+}
+.hero__title {
+  font-size: 24px;
+  font-weight: 700;
+  transition: color 0.25s cubic-bezier(0.2, 0.78, 0.83, 0.67);
+}
+@media (hover: none), (hover: on-demand) {
+  .hero__title {
+    pointer-events: none;
+  }
+}
+.hero__title:hover {
+  color: orange;
+}
+.hero__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 #sparkCanvas {
@@ -123,42 +236,7 @@ main {
   z-index: 2;
   will-change: transform;
   transform: translate(-50%, -50%);
-  animation: effectRotateAndScale 25s infinite linear alternate;
-}
-
-@keyframes effectRotateAndScale {
-  0% {
-    transform: rotate3d(0, 0, 0, 0) scale3d(1, 1, 1);
-  }
-  20% {
-    transform: rotate3d(0, 0, 1, 100deg) scale3d(1.4, 1.4, 1.4);
-  }
-  40% {
-    transform: rotate3d(0, 0, 1, 150deg) scale3d(1.2, 1.2, 1);
-  }
-  60% {
-    transform: rotate3d(0, 0, 1, 200deg) scale3d(1, 1, 1);
-  }
-  80% {
-    transform: rotate3d(0, 0, 1, 250deg) scale3d(1.5, 1.3, 1.3);
-  }
-  100% {
-    transform: rotate3d(0, 0, 1, 360deg) scale3d(1.2, 1.3, 1.3);
-  }
-}
-@keyframes pulse {
-  0% {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale3d(1.02, 1.02, 1.02);
-  }
-  100% {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
+  animation: effectRotate 25s infinite linear alternate;
 }
 
 /*# sourceMappingURL=style.css.map */
