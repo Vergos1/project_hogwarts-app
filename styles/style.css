@@ -139,7 +139,7 @@ main {
 .hero__title {
   font-size: 24px;
   font-weight: 700;
-  transition: color 0.25s cubic-bezier(0.2, 0.78, 0.83, 0.67);
+  transition: color 0.15s cubic-bezier(0.1, 0.78, 0.83, 0.67);
 }
 @media (hover: none), (hover: on-demand) {
   .hero__title {
@@ -147,13 +147,36 @@ main {
   }
 }
 .hero__title:hover {
-  color: orange;
+  color: #D3BB89;
 }
 .hero__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+}
+.hero__list-item {
+  transition: color 0.15s cubic-bezier(0.1, 0.78, 0.83, 0.67);
+  font-size: 18px;
+}
+@media (hover: none), (hover: on-demand) {
+  .hero__list-item {
+    pointer-events: none;
+  }
+}
+.hero__list-item:hover {
+  color: #D3BB89;
+}
+.hero__contact-me {
+  transition: color 0.15s cubic-bezier(0.1, 0.78, 0.83, 0.67);
+}
+@media (hover: none), (hover: on-demand) {
+  .hero__contact-me {
+    pointer-events: none;
+  }
+}
+.hero__contact-me:hover {
+  color: #D3BB89;
 }
 
 #sparkCanvas {
@@ -219,7 +242,7 @@ main {
   background-image: url("../img/front-background-right.png");
   z-index: 2;
   transition: transform 1.5s cubic-bezier(0.075, 0.5, 0, 1);
-  transform: translate3d(calc(var(--scroll) / 5), calc(var(--scroll) / 12), 0);
+  transform: translate3d(calc(var(--scroll) / 12), calc(var(--scroll) / -7), 0);
 }
 
 .wrapper-front-center {

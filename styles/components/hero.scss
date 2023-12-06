@@ -38,13 +38,30 @@
     transition: $transition-link;
 
     &:hover {
-      color: orange;
+      color: #D3BB89;
     }
   }
 
   &__list {
     @include flex-all-between;
     gap: 20px;
+  }
+
+  &__list-item {
+    @include disable-hover-effects;
+    transition: $transition-link;
+    font-size: 18px;
+
+    &:hover {
+      color: #D3BB89;
+    }
+  }
+  &__contact-me {
+    @include disable-hover-effects;
+    transition: $transition-link;
+    &:hover {
+      color: #D3BB89;
+    }
   }
 }
 
@@ -112,7 +129,7 @@
   background-image: url("../img/front-background-right.png");
   z-index: $z-index-2;
   transition: $transition-parallax;
-  transform: translate3d(calc(var(--scroll) / 5), calc(var(--scroll) / 12), 0);
+  transform: translate3d(calc(var(--scroll) / 12), calc(var(--scroll) / -7), 0);
 }
 
 .wrapper-front-center {
