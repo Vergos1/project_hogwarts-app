@@ -14,7 +14,7 @@ Welcome to the Hogwarts Legacy project! This is an interactive canvas-based web 
 
 - **HTML5 Canvas**: For rendering interactive animations and parallax effects.
 - **SCSS**: For styling and ensuring a responsive design.
-- **JavaScript**: To create interactive elements and manage parallax layers.
+- **JavaScript, gsap library**: To create interactive elements and manage parallax layers.
 
 ## Acknowledgments
 
