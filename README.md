@@ -13,11 +13,11 @@ Welcome to the Hogwarts Legacy project! This is an interactive canvas-based web 
 ## Technologies Used
 
 - **HTML5 Canvas**: For rendering interactive animations and parallax effects.
-- **CSS3**: For styling and ensuring a responsive design.
+- **SCSS**: For styling and ensuring a responsive design.
 - **JavaScript**: To create interactive elements and manage parallax layers.
-- **React.js**: Leveraged for its component-based architecture to manage UI components efficiently.
 
 ## Setup
 
 Clone the repository and run the following command to start the development server:
+git clone https://github.com/Vergos1/project_hogwarts-parallax.git 
 
