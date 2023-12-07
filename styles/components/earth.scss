@@ -1,0 +1,18 @@
+.wrapper-earth {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+.earth {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  background-image: url("../img/earth-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: $z-index-5;
+}
