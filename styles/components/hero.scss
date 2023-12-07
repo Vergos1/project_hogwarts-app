@@ -56,9 +56,11 @@
       color: #D3BB89;
     }
   }
+
   &__contact-me {
     @include disable-hover-effects;
     transition: $transition-link;
+
     &:hover {
       color: #D3BB89;
     }
@@ -129,22 +131,23 @@
   background-image: url("../img/front-background-right.png");
   z-index: $z-index-2;
   transition: $transition-parallax;
-  transform: translate3d(calc(var(--scroll) / 12), calc(var(--scroll) / -7), 0);
+  transform: translate3d(calc(var(--scroll) / 12), calc(var(--scroll) / 4), 0);
 }
 
 .wrapper-front-center {
   background-image: url("../img/front-background-center.png");
   transition: $transition-parallax;
-  transform: translate3d(0, calc(var(--scroll) / 15), 0);
+  transform: translate3d(0, calc(var(--scroll) / 13), 0);
   z-index: $z-index-4;
 }
 
 .effects {
   position: absolute;
   top: 62%;
-  left: 49%;
+  left: 48%;
   z-index: $z-index-2;
   will-change: transform;
   transform: translate(-50%, -50%);
+
   animation: effectRotate 25s infinite linear alternate;
 }

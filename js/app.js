@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 ScrollSmoother.create({
-  smooth: 1.8,
+  smooth: 1.6,
   effects: true,
   smoothTouch: 0.1,
 })
